@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+  <div th:each="order : ${orders}">
+    <div th:text="${order.name}">Nome do produto</div>
+    <div>Valor: <span th:text="${order.value}">200,99</span></div>
+    <div>Data de entrega: <span th:text="${order.deliverDate}">01/05/2021</span></div>
+    <div>Produto</div>
+    <div>
+      <input th:value="${order.productUrl}" value="url_do_produto" />
+    </div>
+    <div>Descrição</div>
+    <div>
+      <textarea th:text="${order.description}">descrição do produto</textarea>
+    </div>
+    <div>
+      <img th:src="${order.imgUrl}" src="" alt="img produto">
+    </div>
+  </div>
+</body>
+</html>
