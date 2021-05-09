@@ -19,26 +19,61 @@
 
                 <div class="mt-3">
                     <label for="productName">Produto</label>
-                    <input th:field="*{productName}" id="productName" class="form-control" name="productName" placeholder="Nome do produto"/>
+                    <input th:field="*{productName}"
+                           id="productName"
+                           class="form-control"
+                           name="productName"
+                           placeholder="Nome do produto"
+                           th:errorClass="is-invalid"
+                    />
                     <small>Informe o nome do produto</small>
+                    <div th:errors="*{productName}" class="invalid-feedback">
+                        Erros do nome do produto
+                    </div>
                 </div>
 
                 <div class="mt-3">
                     <label for="productUrl">URL</label>
-                    <input th:field="*{productUrl}" id="productUrl" class="form-control" name="productUrl" placeholder="URL do produto"/>
+                    <input th:field="*{productUrl}"
+                           id="productUrl"
+                           class="form-control"
+                           name="productUrl"
+                           placeholder="URL do produto"
+                           th:errorClass="is-invalid"
+                    />
                     <small>Procure em site o produto que você deseja e cole a URL da página aqui</small>
+                    <div th:errors="*{productUrl}" class="invalid-feedback">
+                        Erros da URL
+                    </div>
                 </div>
 
                 <div class="mt-3">
                     <label for="imageUrl">URL da imagem</label>
-                    <input th:field="*{imageUrl}" id="imageUrl" class="form-control" name="imageUrl" placeholder="Url da imagem"/>
+                    <input th:field="*{imageUrl}"
+                           id="imageUrl"
+                           class="form-control"
+                           name="imageUrl"
+                           placeholder="Url da imagem"
+                           th:errorClass="is-invalid"
+                    />
                     <small>Coloque a URL de uma boa imagem do produto para conseguir compradores</small>
+                    <div th:errors="*{imageUrl}" class="invalid-feedback">
+                        Erros da url da imagem
+                    </div>
                 </div>
 
                 <div class="mt-3">
                     <label for="description">Descrição</label>
-                    <textarea th:field="*{productName}" id="description" class="form-control" name="description"
-                              placeholder="Adicione detalhes para ajudar o comprador"></textarea>
+                    <textarea th:field="*{description}"
+                              id="description"
+                              class="form-control"
+                              name="description"
+                              placeholder="Adicione detalhes para ajudar o comprador"
+                              th:errorClass="is-invalid"
+                    ></textarea>
+                    <div th:errors="*{description}" class="invalid-feedback">
+                        Erros da descrição
+                    </div>
                 </div>
 
                 <button class="btn btn-primary mt-3" type="submit">Enviar</button>

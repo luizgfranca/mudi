@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 public class NewRequestDto {
 
-    @NotBlank
+    @NotBlank //notblank.NewRequestDto.productName
     private String productName;
 
     @NotBlank
