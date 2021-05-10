@@ -1,6 +1,7 @@
 package com.study.mudi.dto;
 
 import com.study.mudi.model.Request;
+import com.study.mudi.model.RequestStatus;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -28,6 +29,7 @@ public class NewRequestDto {
         request.setDescription(description);
         request.setImgUrl(imageUrl);
         request.setProductUrl(productUrl);
+        request.setStatus(RequestStatus.WAITING);
 
         return request;
 

@@ -38,7 +38,7 @@ public class RequestController {
         Request request =  req.toRequest();
         requestRepository.save(request);
 
-        return "request/form";
+        return "redirect:/home";
 
     }
 

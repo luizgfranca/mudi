@@ -2,10 +2,7 @@ package com.study.mudi.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -23,5 +20,8 @@ public class Request {
     private String productUrl;
     private String imgUrl;
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    private RequestStatus status;
 
 }
