@@ -56,8 +56,17 @@
 
           <div class="col-12 col-sm-8 mb-3">
             <div class="row">
-              <div class="col-12 col-sm-5">Valor: <span th:text="${order.value}">200,99</span></div>
-              <div class="col-12 col-sm-7">Data de entrega: <span th:text="${order.deliverDate}">01/05/2021</span></div>
+              <div class="col-12 col-sm-5">
+                Valor:
+                <span th:text="${'R$' + #numbers.formatDecimal(order.value, 3, 'POINT', 2, 'COMMA')}"
+                      th:if="${order.value} != null">
+                  200,99
+                </span>
+              </div>
+              <div class="col-12 col-sm-7">
+                Data de entrega:
+                <span th:text="${#temporals.format(order.deliverDate, 'dd/MM/yyyy')}">01/05/2021</span>
+              </div>
             </div>
             <div>Produto</div>
             <div>
