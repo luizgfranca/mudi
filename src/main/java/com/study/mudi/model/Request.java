@@ -24,4 +24,7 @@ public class Request {
     @Enumerated(EnumType.STRING)
     private RequestStatus status;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
+
 }

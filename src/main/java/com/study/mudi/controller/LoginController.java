@@ -1,2 +1,17 @@
-package com.study.mudi.controller;public class LoginController {
+package com.study.mudi.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+
+    @PostMapping
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
 }
